@@ -46,3 +46,8 @@ def find_pet_by_name(petshop, name)
   return petshop[:pets].select{|pet| pet[:name] == name}[0]
 end
 
+def remove_pet_by_name(petshop, name)
+  pet_to_remove = find_pet_by_name(petshop, name)
+  petshop[:pets].delete(pet_to_remove)
+end
+
