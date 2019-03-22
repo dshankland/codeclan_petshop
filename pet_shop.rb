@@ -55,3 +55,10 @@ def add_pet_to_stock(petshop, pet)
   petshop[:pets].push(pet)
 end
 
+def customer_cash(customer)
+  return customer[:cash]
+end
+
+def remove_customer_cash(customer, money)
+  customer[:cash] -= money
+end
