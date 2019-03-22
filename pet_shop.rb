@@ -33,3 +33,16 @@ def pets_by_breed(petshop, breed)
   # refactored this to a shorter version..
   return petshop[:pets].select{|pet| pet[:breed] == breed}
 end
+
+def find_pet_by_name(petshop, name)
+  # pet_by_name = []
+  # for pet in petshop[:pets]
+  #   if pet[:name] == name
+  #     pet_by_name = pet
+  #   end
+  # end
+  # return pet_by_name
+  # making a big assumption that there's only one pet matching or no pets
+  return petshop[:pets].select{|pet| pet[:name] == name}[0]
+end
+
